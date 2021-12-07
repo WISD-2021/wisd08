@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TaskController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
 Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.index');
 Route::post('/task', [TaskController::class, 'store'])->name('tasks.store');
 Route::delete('/task/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');
