@@ -60,3 +60,6 @@ Route::get('/cc/c2', function () {
 Route::get('/ff/f1', function () {
     return view('ff.f1');
 });
+Route::get('/ff/f2', function () {
+    return view('ff.f2');
+});
